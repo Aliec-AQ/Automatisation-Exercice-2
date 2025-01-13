@@ -32,7 +32,9 @@ class PopulateDatabaseCommand extends Command
     {
         $output->writeln('Populate database...');
 
-        /** @var \Illuminate\Database\Capsule\Manager $db */
+        /**
+ * @var \Illuminate\Database\Capsule\Manager $db 
+*/
         $db = $this->app->getContainer()->get('db');
 
         $db->getConnection()->statement("SET FOREIGN_KEY_CHECKS=0");
